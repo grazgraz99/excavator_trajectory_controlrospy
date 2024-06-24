@@ -1,0 +1,15 @@
+TebLocalPlannerROS:
+  odom_topic: "/odometry/filtered"
+  map_frame: "map"
+  robot_radius: 0.3
+  max_vel_x: 1.0
+  max_vel_theta: 1.5
+  acc_lim_x: 2.5
+  acc_lim_theta: 3.2
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.1
+  min_obstacle_dist: 0.2
+  inflation_dist: 0.3
+  costmap_converter_plugin: ""
+  costmap_converter_spin_thread: True
+  costmap_converter_rate: 5.0

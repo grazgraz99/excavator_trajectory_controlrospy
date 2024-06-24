@@ -1,0 +1,19 @@
+<launch>
+
+
+<!-- Launch Gazebo (empty world) -->
+  <include file="$(find husky_gazebo)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/empty.world"/>
+  </include>
+
+
+<rosparam file="$(find excavator_trajectory_controlrospy)/params/husky_pure_pursuit.yaml" />
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find excavator_trajectory_controlrospy)/rviz/rviz_odom_markers_husky.rviz"/>
+
+<node pkg="excavator_trajectory_controlrospy" name="centerline_markers_node" type="centerline_markers_node.py"/>
+
+<node pkg="excavator_trajectory_controlrospy" name="diff_drive_pure_pursuit" type="diff_drive_pure_pursuit.py"/>
+
+
+</launch>

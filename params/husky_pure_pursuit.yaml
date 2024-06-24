@@ -1,0 +1,10 @@
+#Parameters for task 1
+
+initial_state: [0,0,0,0] #[X,Y,theta(yaw wrt +x),v(velocity)]
+goal_state: [10,15,0,0] #[X,Y,theta(yaw wrt +x),v(velocity)]
+control_list: [[1,0.5,10],[-1,0.5,5]] #[acceleration(m/s^2), steering angle(radians),applied duration(seconds)]
+wheelbase: .324 #meters
+dt: .1 #100ms between states
+max_vel: 5 #max velocity(m/s)
+min_vel: 0.0 #min velocity(m/s)
+odom_topic: '/odometry/filtered'
